@@ -1,2 +1,11 @@
-
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Yongo Hingo の遊び方</title>
+</head>
+<body>
+  <h1>Yongo Hingo の遊び方</h1>
+  <video src="./yongohingmovie.mov" controls width="300"></video>
+</body>
+</html>
