@@ -2,10 +2,131 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yongo Hingo の遊び方</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1e2a5e;
+      --cream: #fdf6e3;
+      --accent: #f5a623;
+      --white: #ffffff;
+      --text: #1a1a2e;
+    }
+
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Noto Sans JP', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      background: var(--cream);
+      color: var(--text);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      max-width: 720px;
+      width: 100%;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+      text-align: center;
+    }
+
+    .logo-area {
+      margin-bottom: 1.5rem;
+    }
+
+    .title-en {
+      font-size: clamp(0.75rem, 2vw, 0.9rem);
+      letter-spacing: 0.2em;
+      color: var(--navy);
+      opacity: 0.6;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 6vw, 2.8rem);
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    h1 .accent {
+      color: var(--accent);
+    }
+
+    .divider {
+      width: 48px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin: 1.2rem auto;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+
+    .video-wrapper video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .sub {
+      margin-top: 1.4rem;
+      font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+      color: var(--navy);
+      opacity: 0.65;
+      line-height: 1.7;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 1.2rem;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 0.4em 1.1em;
+      border-radius: 999px;
+    }
+
+    @media (max-width: 480px) {
+      .card { padding: 1.8rem 1.2rem; border-radius: 14px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Yongo Hingo の遊び方</h1>
-  <video src="./yongohingmovie.mov" controls width="300"></video>
+  <div class="card">
+    <div class="logo-area">
+      <p class="title-en">How to Play</p>
+      <h1>よんごひんご<span class="accent">の</span>遊び方</h1>
+    </div>
+    <div class="divider"></div>
+    <div class="video-wrapper">
+      <video src="./yongohingmovie.mov" controls playsinline></video>
+    </div>
+    <p class="sub">手のジェスチャーと言葉を結びつける、<br>記憶系パーティーゲーム</p>
+    <span class="badge">✌️ よんごひんご !</span>
+  </div>
 </body>
 </html>
